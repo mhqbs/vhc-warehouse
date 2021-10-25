@@ -7,7 +7,6 @@ use App\Models\spartinfo;
 use App\Models\Vehicle;
 use App\Models\vhpartinfo;
 use Illuminate\Http\Request;
-use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -33,20 +32,20 @@ class PostController extends Controller
             "parts" => spartinfo::all()
         ]);
     }
-    public function showVehicle($ID)
+    public function showVehicle(Vehicle $VehicleID)
     {
         //
         return view('vin', [
             'title' => 'Vehicles Details',
-            'vsinfo' => Vehicle::findOrFail($ID)
+            'vsinfo' => $VehicleID
         ]);
     }
-    public function vehmaintenance($ID)
+    public function vehmaintenance($id)
     {
         //
         return view('vehmain', [
             'title' => 'Vehicles Maintenance',
-            'vehmain' => vhpartinfo::findOrFail($ID)
+            'vehmain' => vhpartinfo::findOrFail($id)
         ]);
     }
     /**
@@ -76,14 +75,7 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show($ID)
-    {
-        //
-        return view('vin', [
-            "title" => "Vehicle Info",
-            "vsinfo" => Vehicle::find($ID)
-        ]);
-    }
+
 
     /**
      * Show the form for editing the specified resource.

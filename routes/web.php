@@ -43,5 +43,5 @@ Route::get('/addvehicle', function () {
 
 Route::get('/vehicles', [PostController::class, 'index']);
 Route::get('/parts', [PostController::class, 'showParts']);
-Route::get('/vin/{ID}', [PostController::class, 'showVehicle']);
+Route::get('/vin/{Vehicle:VehicleID}', [PostController::class, 'showVehicle']);
 Route::get('/vehmain/{ID}', [PostController::class, 'vehmaintenance']);

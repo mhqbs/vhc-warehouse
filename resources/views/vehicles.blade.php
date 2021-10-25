@@ -49,7 +49,7 @@
             <button type="button" class="btn btn-danger btn-sm">
               <span data-feather='x-circle'></span>
             </button>
-            <a href="/vin/{{ $vehicle["id"] }}">
+            <a href="/vin/{{ $vehicle->VehicleID }}">
             <button type="button" class="btn btn-success btn-sm">
               <span data-feather='eye'></span>
             </button>

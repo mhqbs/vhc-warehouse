@@ -18,7 +18,19 @@
     <div class="mb-3">
         <label for="modelType" class="form-label">Model Type</label>
         <input type="text" class="form-control" id="modelType" placeholder="HonXX">
-      </div>
+    </div>
+    <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input type="text" class="form-control" id="year" placeholder="20XX">
+    </div>
+    <div class="mb-3">
+        <label for="policeNumber" class="form-label">Police Number</label>
+        <input type="text" class="form-control" id="PoliceNumber" placeholder="B 1111 XX">
+    </div>
+    <div class="mb-3">
+        <label for="region" class="form-label">Region</label>
+        <input type="text" class="form-control" id="region" placeholder="Jakarta">
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   {{-- 
