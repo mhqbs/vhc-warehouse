@@ -34,6 +34,13 @@ Route::get('/dashboard', function () {
     ]);
 });
 
+Route::get('/addvehicle', function () {
+    return view('addvehicle', [
+        "title" => "Add New Vehicle"
+    ]);
+});
+
+
 Route::get('/vehicles', [PostController::class, 'index']);
 Route::get('/parts', [PostController::class, 'showParts']);
 Route::get('/vin/{ID}', [PostController::class, 'showVehicle']);
